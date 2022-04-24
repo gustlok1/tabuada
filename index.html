@@ -4,34 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div{
-            border: 5px solid black;
-            height: 100px;
-            width: 100px;
-        }
-        .div2{
-            box-sizing: border-box;
-        }
-
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        
-    </style>
+    <title>Teste</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-    
-    <div class="div1">
-        <p>Lorem ipsum dolor sit amet consectetur </p>
-    </div>
-    <div class="div2">
-        <p>Lorem ipsum dolor sit amet consectetur </p>
-    </div>
-    <div>
+    <header>
+        <p>LOGO</p>
+        <ul>
+            <li>Fale conosco</li>
+            <li>Produtos</li>
+            <li>Godoy</li>
+        </ul>
+    </header>
+    <nav id="nav">
+        <script>
 
-    </div>
+            num1 = parseInt(prompt("Digite um numero"))
+            num1++
+            for(i = 1; i < num1; i++){
+                if(i % 10 == 0 || i == 1){
+                    h1 = document.createElement("h1")
+                    contH1 = document.createTextNode("Tabuada da dezena " + i)
+                    h1.appendChild(contH1)
+                    document.getElementById("nav").appendChild(h1)
+                    div2 = document.createElement("div")
+                    div2.classList.add("divpai")
+                }
+                div1 = document.createElement("div")
+                div1.classList.add("divfilho")
+                
+                for(j = 1; j < 11; j++){
+                    tag = document.createElement("p")
+                    conteudo = document.createTextNode(i + " * " + j + " = " + (j*i))
+                    tag.appendChild(conteudo)                
+                    div1.appendChild(tag)
+                }
+                div2.appendChild(div1)
+                document.getElementById("nav").appendChild(div2)
+            }
+        </script>
+    </nav>
+    
 </body>
 </html>
