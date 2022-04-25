@@ -19,14 +19,17 @@
     <nav id="nav">
         <script>
 
-            num1 = parseInt(prompt("Digite um numero"))
+            //num1 = parseInt(prompt("Digite um numero"))
+            num1 = 80
             num1++
             for(i = 1; i < num1; i++){
                 if(i % 10 == 0 || i == 1){
+                    div3 = document.createElement("div")
+                    div3.classList.add("divavo")
                     h1 = document.createElement("h1")
                     contH1 = document.createTextNode("Tabuada da dezena " + i)
                     h1.appendChild(contH1)
-                    document.getElementById("nav").appendChild(h1)
+                    div3.appendChild(h1)
                     div2 = document.createElement("div")
                     div2.classList.add("divpai")
                 }
@@ -40,7 +43,8 @@
                     div1.appendChild(tag)
                 }
                 div2.appendChild(div1)
-                document.getElementById("nav").appendChild(div2)
+                div3.appendChild(div2)
+                document.getElementById("nav").appendChild(div3)
             }
         </script>
     </nav>
